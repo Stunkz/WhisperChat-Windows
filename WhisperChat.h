@@ -1,5 +1,6 @@
+//  WhisperChat.h
 //
-// Created by ludov on 02/03/2024.
+//  Created by : Stunkz ( https://github.com/Stunkz )
 //
 
 #ifndef WHISPERCHAT_WHISPERCHAT_H
