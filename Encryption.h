@@ -6,7 +6,7 @@
 #ifndef WHISPERCHAT_ENCRYPTION_H
 #define WHISPERCHAT_ENCRYPTION_H
 
-#include "../Macro.h"
+#include "Macro.h"
 #include <stdio.h>
 #include <signal.h>
 #include <openssl/rsa.h>
@@ -49,7 +49,7 @@ EVP_PKEY * loadPrivateKey(const char * privateKey);
  * @param publicKeyChar : A string representation of the public key.
  * @param privateKeyChar : A string representation of the private key.
  */
-__attribute__((unused)) void loadRsaKeys(const char * publicKeyChar, const char * privateKeyChar);
+void loadRsaKeys(const char * publicKeyChar, const char * privateKeyChar);
 
 
 /**
@@ -60,7 +60,7 @@ __attribute__((unused)) void loadRsaKeys(const char * publicKeyChar, const char 
  * @param len : The length of the message to encrypt.
  * @return The length of the encrypted message.
  */
-__attribute__((unused)) size_t rsaEncrypt(unsigned char * messageToEncrypt, unsigned char * encryptedMessage, int len);
+size_t rsaEncrypt(unsigned char * messageToEncrypt, unsigned char * encryptedMessage, int len);
 
 
 /**
@@ -71,6 +71,6 @@ __attribute__((unused)) size_t rsaEncrypt(unsigned char * messageToEncrypt, unsi
  * @param len : The length of the message to decrypt.
  * @return The length of the decrypted message.
  */
-__attribute__((unused)) size_t rsaDecrypt(unsigned char * messageToDecrypt, unsigned char * decryptedMessage, int len);
+size_t rsaDecrypt(unsigned char * messageToDecrypt, unsigned char * decryptedMessage, int len);
 
 #endif //WHISPERCHAT_ENCRYPTION_H

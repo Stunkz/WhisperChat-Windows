@@ -52,7 +52,7 @@ EVP_PKEY * loadPrivateKey(const char * privateKeyStr) {
     return rsa;
 }
 
-__attribute__((unused)) void loadRsaKeys(const char * publicKeyChar, const char * privateKeyChar) {
+void loadRsaKeys(const char * publicKeyChar, const char * privateKeyChar) {
     publicKey = loadPublicKey(publicKeyChar);
     privateKey = loadPrivateKey(privateKeyChar);
     if ( publicKey == NULL || privateKey == NULL ) {
@@ -63,7 +63,7 @@ __attribute__((unused)) void loadRsaKeys(const char * publicKeyChar, const char 
 }
 
 
-__attribute__((unused)) size_t rsaEncrypt(unsigned char * messageToEncrypt, unsigned char * encryptedMessage, int len) {
+size_t rsaEncrypt(unsigned char * messageToEncrypt, unsigned char * encryptedMessage, int len) {
 
     EVP_PKEY_CTX * ctx = EVP_PKEY_CTX_new(publicKey, NULL);
 
@@ -86,7 +86,7 @@ __attribute__((unused)) size_t rsaEncrypt(unsigned char * messageToEncrypt, unsi
     return encryptedLength;
 }
 
-__attribute__((unused)) size_t rsaDecrypt(unsigned char * messageToDecrypt, unsigned char * decryptedMessage, int len) {
+size_t rsaDecrypt(unsigned char * messageToDecrypt, unsigned char * decryptedMessage, int len) {
 
     EVP_PKEY_CTX * ctx = EVP_PKEY_CTX_new(privateKey, NULL);
 
