@@ -18,10 +18,10 @@ void serverCommunication() {
     serverAddress.sin_addr.s_addr = inet_addr(SERVER_IP);
     connectSocket(serverSocket, &serverAddress);
 
-    pthread_t * pReceiveThread = (pthread_t * ) calloc(1, sizeof(pthread_t));
-    pthread_create(pReceiveThread, NULL, receiveData, NULL);
-    pthread_t * pSendThread = (pthread_t * ) calloc(1, sizeof(pthread_t));;
-    pthread_create(pSendThread, NULL, sendData, NULL);
+    PReceiveThread = (pthread_t * ) calloc(1, sizeof(pthread_t));
+    pthread_create(PReceiveThread, NULL, receiveData, &serverSocket);
+    PSendThread = (pthread_t * ) calloc(1, sizeof(pthread_t));;
+    pthread_create(PSendThread, NULL, sendData, NULL);
 }
 
 

@@ -13,7 +13,7 @@
 #include "../Ressources/Debug.h"
 #include "SocketCommands.h"
 #include "Encryption.h"
-#include "ReceiveData.h"
+#include "ReceiveData/ReceiveData.h"
 #include "SendData.h"
 #include <stdio.h>
 #include <signal.h>
@@ -23,7 +23,7 @@
 #define PORT 8080
 #define SERVER_IP "127.0.0.1"
 
-extern pthread_t * pReceiveThread;
-extern pthread_t * pSendThread;
+extern pthread_t * PReceiveThread;
+extern pthread_t * PSendThread;
 
 #endif //WHISPERCHAT_SERVERCOMMUNICATION_H

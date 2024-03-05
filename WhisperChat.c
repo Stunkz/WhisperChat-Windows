@@ -29,6 +29,14 @@ void stopProgram() {
     if ( privateKey != NULL ) {
         EVP_PKEY_free(privateKey);
     }
+    if ( PReceiveThread != NULL ) {
+        pthread_cancel(*PReceiveThread);
+        free(PReceiveThread);
+    }
+    if ( PSendThread != NULL ) {
+        pthread_cancel(*PSendThread);
+        free(PSendThread);
+    }
 
     WSACleanup();
 
