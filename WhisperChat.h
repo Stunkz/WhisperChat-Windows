@@ -7,6 +7,7 @@
 #define WHISPERCHAT_WHISPERCHAT_H
 
 #include <stdio.h>
-#include "Macro.h"
+#include "Ressources/Debug.h"
+#include "Communication/ServerCommunication.h"
 
 #endif //WHISPERCHAT_WHISPERCHAT_H

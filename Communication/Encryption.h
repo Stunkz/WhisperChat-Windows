@@ -6,7 +6,7 @@
 #ifndef WHISPERCHAT_ENCRYPTION_H
 #define WHISPERCHAT_ENCRYPTION_H
 
-#include "Macro.h"
+#include "../Ressources/Macro.h"
 #include <stdio.h>
 #include <signal.h>
 #include <openssl/rsa.h>

@@ -10,9 +10,18 @@
 #define MAX_MESSAGE_LENGTH 64
 #endif
 
-#include "../Macro.h"
-#include "../Encryption.h"
+#include "../Ressources/Macro.h"
+#include "../Communication/Encryption.h"
 #include <stdio.h>
+#include <signal.h>
 
+/**
+ * This function is used to handle the message received from the server.
+ * It returns a printable string with identify and the message. (e.g. <Stunkz> Hello World!)
+ *
+ * @param encryptedMessage : The encrypted message.
+ * @return Pointer to the message.
+ */
+ char * messageHandler(unsigned char * encryptedMessage);
 
 #endif //WHISPERCHAT_MESSAGEHANDLER_H
